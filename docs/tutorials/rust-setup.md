@@ -15,7 +15,7 @@ If you want to set up a development container in the programming language Rust, 
 
 ## **Part 1**: Initialization
 
-### Step 1: Create a New Directory and Initialize Git
+### Step 1: Create a New Directory and Initialize Git :rocket:
 
 (A) Open your terminal or command prompt.
 
@@ -41,13 +41,11 @@ git commit -m "Initial commit with README"
 
 (A) Log into GitHub and click the green "New" button next to "Top Repositories"
 
-(B) You only need to fill in these details:
+(B) You only need to fill in these details, do not do anything else:
 
 - Repository Name: rust-dev-container
 - Description: "Setting up a rust-dev-container"
 - Visibility: Public
-
-(C) Do not initialize the repository with a README, .gitignore, or license.
 
 (D) Click Create Repository.
 
@@ -185,4 +183,4 @@ In this project, we:
 * Set up a development environment
 * Created a fully functional RUST program
 
-That's it everyone! Congratulations on building your first ever Rust program!
+That's it everyone! Congratulations on building your first ever Rust program! :smile:
