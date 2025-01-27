@@ -7,6 +7,8 @@ theme:
   - pymdownx.details
   - pymdownx.superfences
   #code blocks
+  features:
+    - content.code.copy
   markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
