@@ -5,7 +5,7 @@
 
 If you want to set up a development container in the programming language Rust, you have come to the right place to learn! Before we start, here are a couple of prerequisites you must have before we dive right in! Much of the content before setting up the development environment cites the Mkdocs tutorial from Comp 423. 
 
-## **Part 0**: Prerequisits
+## **Part 0**: Prerequisites
 
 - Install Visual Studio Code
     - Install the Dev Containers extension for VS Code (Extensions > Type Dev Containers in the search bar and click the first option > Hit Install)
