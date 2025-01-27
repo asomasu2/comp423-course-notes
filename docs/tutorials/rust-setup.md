@@ -86,7 +86,6 @@ Now we have this file inside the right directory.
 - Copy and paste this into .devcontainer.json
 ```py
 {
-    "name": "Rust Development Environment",
     "image": "mcr.microsoft.com/devcontainers/rust:latest",
     "customizations": {
         "vscode": {
@@ -127,3 +126,24 @@ fn main() {
     println!("Hello, world!");
 }
 ```
+
+(C) Modify the inside of the println! parentheses to say "Hello COMP423"
+(D) Type and enter this inside your VS Code terminal:
+```py
+cargo build
+```
+Now, we have compiled our code, but we have not run it yet
+
+(E) To run our code, we can type and enter:
+
+```py
+./target/debug/hello-comp423
+```
+
+You should now see "Hello COMP423" printed in your terminal!
+
+Sidenote, we can actually do both of the previous steps in just one step by running: cargo run.
+
+This step compiles our file, and runs it to see the same output in the terminal!
+
+That's it everyone! Congratulations on building your first ever Rust program!
