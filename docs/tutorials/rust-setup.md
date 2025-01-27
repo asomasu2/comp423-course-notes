@@ -6,6 +6,7 @@
 If you want to set up a development container in the programming language Rust, you have come to the right place to learn! Before we start, here are a couple of prerequisites you must have before we dive right in! Much of the content before setting up the development environment cites the Mkdocs tutorial from Comp 423. 
 
 - Install Visual Studio Code
+    - Install the Dev Containers extension for VS Code (Extensions > Type Dev Containers in the search bar and click the first option > Hit Install)
 - Install Git
 - Install Docker
 - Have a GitHub account
@@ -24,7 +25,7 @@ cd rust-dev-container
 ```
 (D) Initialize a new Git repository.
 ``` py
-cd rust-dev-container
+git init
 ```
 (E) Create a README file:
 ``` py
@@ -34,9 +35,9 @@ git commit -m "Initial commit with README"
 ```
 Step 2. Create a Remote Repository on GitHub
 
-(1) Log into GitHub account and navigate to the Create a New Repository page.
+(1) Log into GitHub and click the green "New" button next to "Top Repositories"
 
-(2) Fill in the details as follows:
+(2) You only need to fill in these details:
 
 - Repository Name: rust-dev-container
 - Description: "Setting up a rust-dev-container"
@@ -48,13 +49,13 @@ Step 2. Create a Remote Repository on GitHub
 
 Step 3. Link your Local Repository to GitHub
 
-(1) Add the GitHub repository:
+(1) Add the GitHub repository by typing this in the same terminal you opened earlier:
 ```py
-git remote add origin https://github.com/<your-username>/comp423-course-notes.git
+git remote add origin https://github.com/<your-username>/rust-dev-container.git
 ```
 (2) Replace <your-username> with your GitHub username.
 
-(2) Check your default branch name with the subcommand git branch. If it's not main, rename it to main with the following command: git branch -M main. Old versions of git choose the name master for the primary branch, but these days main is the standard primary branch name.
+(2) Check your default branch name with the subcommand git branch. If it's not main, rename it to main with the following command: git branch -M main.
 
 (3) Push your local commits to the GitHub repository:
 ```py
@@ -67,10 +68,20 @@ Now that we have GitHub all set up, it is time to actually set up the developmen
 
 Step 1. Add Development Container Configuration
 
-- In VS Code, open the rust-dev-container directory. You can do this via: File > Open Folder.
-- Install the Dev Containers extension for VS Code.
-- Create a .devcontainer directory in the root of your project with the following file inside of this "hidden" configuration directory:
-.devcontainer/devcontainer.json
+- Open VS Code
+- Click File > Open > rust-dev-container
+- Open your terminal and type:
+```py
+mkdir .devcontainer
+```
+This creates the directory in your project
+
+Next type:
+```py
+touch .devcontainer.json
+```
+
+Now we have this file inside the right directory.
 
 - Copy and paste this into .devcontainer.json
 ```py
@@ -87,4 +98,32 @@ Step 1. Add Development Container Configuration
 }
 ```
 
+Now to run Rust in the our Docker environment, click Command + Shift + P
 
+Then, type in Dev Container: Reopen in Dev Container, and select this option
+
+After loading for a moment, you will now be inside a Rust project. To make sure you are using rust, type and enter:
+
+```py
+rustc --version
+```
+If the following output is rustc followed by a float, you are good to go!
+
+Part 3: Hello World
+
+(A) Create and navigate to a new file for our Rust program
+
+```py
+cargo new hello-comp423 --vcs none
+cd hello-comp423
+```
+
+(B) Go to Explorer > hello-comp423 > src > main.rs
+
+The contents of the file should be:
+
+```py
+fn main() {
+    println!("Hello, world!");
+}
+```
